@@ -2623,17 +2623,17 @@ data = [
 def sort_countries_by_name(data):
     """Return a copy of the data, sorted by name."""
     # Sort countries by their names
-    pass
+    return sorted(data, key=lambda x: x['name'])
 
 def sort_countries_by_capital(data):
     """Return a copy of the data, sorted by capital."""
     # Sort countries by their capitals
-    pass
+    return sorted(data, key=lambda x: x['capital'])
 
 def sort_countries_by_population(data):
     """Return a copy of the data, sorted by population."""
     # Sort countries by their population
-    pass
+    return sorted(data, key=lambda x: x['population'], reverse=True)
 
 
 def get_ten_most_spoken_languages(data):
@@ -2645,7 +2645,16 @@ def get_ten_most_spoken_languages(data):
     Have a look at collections.Counter if you're stuck:
     https://docs.python.org/3/library/collections.html#collections.Counter
     """
-    pass
+    from collections import Counter
+
+    # Collect all languages spoken in all countries
+    all_languages = [language for country in data for language in country['languages']]
+
+    # Count the occurrence of each language
+    language_counter = Counter(all_languages)
+
+    # Sort and get the ten most spoken languages by location
+    return language_counter.most_common(10)
 
 
 def get_ten_most_populated_countries(data):
@@ -2654,7 +2663,14 @@ def get_ten_most_populated_countries(data):
     As Array with tuples like (name, population)
     Example: [('China', 1377422166), ('India', 1295210000), ...]
     """
-    pass
+    # Get the ten most populated countries
+    top_ten_populated_countries = sort_countries_by_population(data)[:10]
+
+    # Extract just the names and populations for display
+    return [(country['name'], country['population']) for country in
+                                        top_ten_populated_countries]
+
+
 
 if __name__ == '__main__':
     print('Sorted by name:')
