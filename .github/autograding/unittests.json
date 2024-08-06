@@ -1,0 +1,32 @@
+[
+  {
+    "name": "test_sort_countries_by_name",
+    "function": "test_sort_countries_by_name",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_sort_countries_by_capital",
+    "function": "test_sort_countries_by_capital",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_sort_countries_by_population",
+    "function": "test_sort_countries_by_population",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_get_most_spoken_languages",
+    "function": "test_get_most_spoken_languages",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_get_most_populated_countries",
+    "function": "test_get_most_populated_countries",
+    "timeout": 10,
+    "points": 1
+  }
+]
