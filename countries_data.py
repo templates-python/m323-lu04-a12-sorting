@@ -1,3 +1,8 @@
+"""Sortieren grösserer Daten.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu04/aufgaben/sorting
+"""
+
 data = [
     {
         "name": "Afghanistan",
