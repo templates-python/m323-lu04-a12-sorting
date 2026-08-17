@@ -1,4 +1,10 @@
-data = [
+"""Sortieren grösserer Daten.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu04/aufgaben/sorting
+"""
+
+from collections import Counter
+COUNTRIES = [
     {
         "name": "Afghanistan",
         "capital": "Kabul",
@@ -2040,7 +2046,6 @@ def get_ten_most_spoken_languages(data):
     Have a look at collections.Counter if you're stuck:
     https://docs.python.org/3/library/collections.html#collections.Counter
     """
-    from collections import Counter
 
     # Collect all languages spoken in all countries
     all_languages = [language for country in data for language in country["languages"]]
@@ -2070,12 +2075,12 @@ def get_ten_most_populated_countries(data):
 
 if __name__ == "__main__":
     print("Sorted by name:")
-    print(sort_countries_by_name(data)[0:5])
+    print(sort_countries_by_name(COUNTRIES)[0:5])
     print("Sorted by capital:")
-    print(sort_countries_by_capital(data)[0:5])
+    print(sort_countries_by_capital(COUNTRIES)[0:5])
     print("Sorted by population:")
-    print(sort_countries_by_population(data)[0:5])
+    print(sort_countries_by_population(COUNTRIES)[0:5])
     print("Most spoken languages by country:")
-    print(get_ten_most_spoken_languages(data))
+    print(get_ten_most_spoken_languages(COUNTRIES))
     print("Ten most populated countries:")
-    print(get_ten_most_populated_countries(data))
+    print(get_ten_most_populated_countries(COUNTRIES))
