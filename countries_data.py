@@ -3,7 +3,7 @@
 Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu04/aufgaben/sorting
 """
 
-data = [
+COUNTRIES = [
     {
         "name": "Afghanistan",
         "capital": "Kabul",
@@ -2059,12 +2059,12 @@ def get_ten_most_populated_countries(data):
 
 if __name__ == "__main__":
     print("Sorted by name:")
-    print(sort_countries_by_name(data)[0:5])
+    print(sort_countries_by_name(COUNTRIES)[0:5])
     print("Sorted by capital:")
-    print(sort_countries_by_capital(data)[0:5])
+    print(sort_countries_by_capital(COUNTRIES)[0:5])
     print("Sorted by population:")
-    print(sort_countries_by_population(data)[0:5])
+    print(sort_countries_by_population(COUNTRIES)[0:5])
     print("Most spoken languages by country:")
-    print(get_ten_most_spoken_languages(data))
+    print(get_ten_most_spoken_languages(COUNTRIES))
     print("Ten most populated countries:")
-    print(get_ten_most_populated_countries(data))
+    print(get_ten_most_populated_countries(COUNTRIES))
